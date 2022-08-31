@@ -28,7 +28,12 @@ function CheckboxForm() {
 
   };
 
-  console.log(permissions)
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    console.log(permissions.permissionsArray)
+  }
+
+
     
   return (
 
@@ -43,6 +48,8 @@ function CheckboxForm() {
               }   
 
               <textarea name="response" value={permissions.permissionsArray}  onChange={handleChange} ></textarea>
+
+              <input type="submit" value="Save" onClick={handleSubmit} />
           </form>
      
  
