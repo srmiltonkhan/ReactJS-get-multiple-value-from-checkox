@@ -1,4 +1,4 @@
-import CheckboxForm1 from "./CheckboxForm1";
+import CheckboxForm1 from "./AllCheckBox";
 
 function App() {
   return <CheckboxForm1 />;

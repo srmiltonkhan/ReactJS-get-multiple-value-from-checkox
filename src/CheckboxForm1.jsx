@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import {CheckboxData} from "./CheckboxData";
+import {selectOptionData} from "./selectOptionData";
 
   
 function CheckboxForm() {
   const [permissions, setPermissions] = useState({
-    permissionsArray: [],
+    permissionsArray: []
   });
   
   const handleChange = (e) => {
@@ -37,12 +37,12 @@ function CheckboxForm() {
     
   return (
 
-          <form>
+          <form onSubmit={handleSubmit}>
               {
-                CheckboxData.map( (item, index) => 
+                selectOptionData.map( (item, index) => 
                   <div key={index}>
-                    <input type="checkbox" name="" value={item.language} onChange={handleChange}/>
-                    <label>{item.language}</label>
+                    <input type="checkbox" name="" value={item.name} onChange={handleChange}/>
+                    <label>{item.name}</label>
                   </div>
                 )
               }   
